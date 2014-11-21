@@ -1,8 +1,16 @@
 require 'sinatra/base'
 
 class Chirper < Sinatra::Base
+
+  set :views, Proc.new { File.join(root, "views") }
+  set :public_folder, Proc.new { File.join(root, "..", "public") }
+
   get '/' do
-    'Hello Chirper!'
+    erb :index
+  end
+
+  get '/sessions/new' do
+    erb :"/sessions/new"
   end
 
   # start the server if ruby file executed directly
