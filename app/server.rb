@@ -1,4 +1,13 @@
 require 'sinatra/base'
+require 'data_mapper'
+require 'dm-postgres-adapter'
+
+env = ENV['RACK_ENV'] || 'development'
+
+DataMapper.setup(:default, "postgres://localhost/chirper_#{env}")
+
+DataMapper.finalize
+DataMapper.auto_upgrade!
 
 class Chirper < Sinatra::Base
 
@@ -11,6 +20,10 @@ class Chirper < Sinatra::Base
 
   get '/sessions/new' do
     erb :"/sessions/new"
+  end
+
+  get '/users/new' do
+    erb :"/users/new"
   end
 
   # start the server if ruby file executed directly

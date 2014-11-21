@@ -1,7 +1,7 @@
 Feature: Logging in
 In order to use Chirper
 As a maker
-I want to sign up to the service
+I want to log in
 
 Scenario: Visiting the homepage
   Given I visit the homepage
