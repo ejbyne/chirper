@@ -9,10 +9,23 @@
   <header>
     <div id="logo">Chirper</div>
     <div id="user-links">
-      <a href="/sessions/new" id="sign-in" class="button">Sign In</a>
-      <a href="/users/new" id="sign-up" class="button">Sign Up</a>
+      <% if current_user %>
+        Welcome, <%= current_user.user_name %>
+      <% else %>
+        <a href="/sessions/new" id="sign-in" class="button">Sign In</a>
+        <a href="/users/new" id="sign-up" class="button">Sign Up</a>
+      <% end %>
     </div>
   </header>
+
+  <% if flash[:errors] && !flash[:errors].empty? %>
+    Sorry, there were the following problems with the form:
+    <ul id="errors">
+      <% flash[:errors].each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    </ul>
+  <% end %>
 
   <%= yield %>
 

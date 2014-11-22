@@ -9,4 +9,24 @@ Scenario: Visiting the homepage
 Scenario: Signing up
   Given I click the "Sign Up" button on the homepage
   When I enter my sign-up details and click "Sign Up"
-  Then I should see "Welcome, Roger!"
+  Then I should see "Welcome, roger_t"
+
+Scenario: I can't sign up if the username is already taken
+  Given a username has already been registered
+  When I try to register with the same username and click "Sign Up"
+  Then I should see "This username is already taken"
+
+Scenario: I can't sign up if the email is already taken
+  Given an email has already been registered
+  When I try to register with the same email and click "Sign Up"
+  Then I should see "This email is already taken"
+
+Scenario: I can't sign up if the email and email confirmation don't match
+  Given I click the "Sign Up" button on the homepage
+  When I enter an email and email confirmation that don't match and click "Sign Up"
+  Then I should see "Email does not match the confirmation"
+
+Scenario: I can't sign up if the password and password confirmation don't match
+  Given I click the "Sign Up" button on the homepage
+  When I enter a password and password confirmation that don't match and click "Sign Up"
+  Then I should see "Password does not match the confirmation"

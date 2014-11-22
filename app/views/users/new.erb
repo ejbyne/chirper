@@ -1,11 +1,11 @@
 <h2>Please enter your details:</h2>
 
-<form action="/" method="post">
-  Select Username:<input type="text" name="user_name">
-  First Name:<input type="text" name="first_name">
-  Last Name:<input type="text" name="last_name">
-  Email:<input type="email" name="email">
-  Confirm Email:<input type="email" name="email_confirmation">
+<form action="/users" method="post">
+  Select Username:<input type="text" name="user_name" value="<%= @user.user_name %>">
+  First Name:<input type="text" name="first_name" value="<%= @user.first_name %>">
+  Last Name:<input type="text" name="last_name" value="<%= @user.last_name %>">
+  Email:<input type="email" name="email" value="<%= @user.email %>">
+  Confirm Email:<input type="email" name="email_confirmation" value="<%= @user.email_confirmation %>">
   Password:<input type="password" name="password">
   Confirm Password:<input type="password" name="password_confirmation">
   <input type="submit" value="Sign Up">
