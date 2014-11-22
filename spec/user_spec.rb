@@ -32,9 +32,9 @@ require 'spec_helper'
                     first_name:             "Roger",
                     last_name:              "Test",
                     email:                  "test@test.com",
-                    email_confirmation:     "test2@test.com",
+                    email_confirmation:     "test@test.com",
                     password:               "test",
-                    password_confirmation:  "test")
+                    password_confirmation:  "test2")
       expect(User.count).to eq(0)
     end
 

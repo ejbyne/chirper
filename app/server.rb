@@ -32,7 +32,7 @@ class Chirper < Sinatra::Base
   end
 
   post '/users' do
-    @user = User.create( user_name:              params[:user_name],
+    @user = User.create(user_name:              params[:user_name],
                         first_name:             params[:first_name],
                         last_name:              params[:last_name],
                         email:                  params[:email],

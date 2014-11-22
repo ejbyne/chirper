@@ -45,6 +45,7 @@ Given(/^an email has already been registered$/) do
 end
 
 When(/^I try to register with the same email and click "(.*?)"$/) do |arg1|
+  visit '/users/new'
   fill_in "user_name", :with => "roger_t2"
   fill_in "first_name", :with => "Roger"
   fill_in "last_name", :with => "Test2"
@@ -56,6 +57,7 @@ When(/^I try to register with the same email and click "(.*?)"$/) do |arg1|
 end
 
 When(/^I enter an email and email confirmation that don't match and click "(.*?)"$/) do |arg1|
+  visit '/users/new'
   fill_in "user_name", :with => "roger_t"
   fill_in "first_name", :with => "Roger"
   fill_in "last_name", :with => "Test"
