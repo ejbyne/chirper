@@ -10,4 +10,4 @@ Scenario: Visiting the homepage
 Scenario: Logging in
   Given I click the "Sign In" button on the homepage
   When I enter my sign-in details and click "Sign In"
-  Then I should see "Welcome, Test"
+  Then I should see "Welcome, roger_t"

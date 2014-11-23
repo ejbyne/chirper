@@ -26,6 +26,18 @@ class Chirper < Sinatra::Base
     erb :"/sessions/new"
   end
 
+  post '/sessions' do
+    user_name, password = params[:user_name], params[:password]
+    user = User.authenticate(user_name, password)
+    if user
+      session[:user_id] = user.id
+      redirect to('/')
+    else
+      flash[:errors] = ["The username or password is incorrect"]
+      erb :"sessions/new"
+    end
+  end
+
   get '/users/new' do
     @user = User.new
     erb :"/users/new"
