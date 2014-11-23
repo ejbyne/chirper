@@ -11,6 +11,7 @@
     <div id="user-links">
       <% if current_user %>
         Welcome, <%= current_user.user_name %>
+        <a href="/sessions/end" id="sign-out" class="button">Sign Out</a>
       <% else %>
         <a href="/sessions/new" id="sign-in" class="button">Sign In</a>
         <a href="/users/new" id="sign-up" class="button">Sign Up</a>
@@ -25,6 +26,11 @@
         <li><%= error %></li>
       <% end %>
     </ul>
+  <% end %>
+  <% if flash[:notice] %>
+    <div id="notice">
+      <%= flash[:notice] %>
+    </div>
   <% end %>
 
   <%= yield %>

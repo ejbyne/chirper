@@ -17,6 +17,7 @@ class Chirper < Sinatra::Base
   enable :sessions
   set :session_secret, 'super secret'
   use Rack::Flash
+  use Rack::MethodOverride
 
   get '/' do
     erb :index
@@ -36,6 +37,21 @@ class Chirper < Sinatra::Base
       flash[:errors] = ["The username or password is incorrect"]
       erb :"sessions/new"
     end
+  end
+
+  get '/sessions/end' do
+    erb :"/sessions/end"
+  end
+
+  post '/sessions/keep' do
+    flash[:notice] = "Not signed out"
+    redirect to('/')
+  end
+
+  delete '/sessions' do
+    flash[:notice] = "Good bye!"
+    session[:user_id] = nil
+    redirect to('/')
   end
 
   get '/users/new' do

@@ -1,24 +1,16 @@
-When(/^I enter my sign\-in details and click "(.*?)"$/) do |arg1|
+Given(/^I have logged in$/) do
   create_user
   visit '/sessions/new'
   fill_in "user_name", :with => "roger_t"
   fill_in "password", :with => "test"
-  click_button(arg1)
+  click_button("Sign In")
 end
 
-When(/^I enter an incorrect username and click "(.*?)"$/) do |arg1|
-  create_user
-  visit '/sessions/new'
-  fill_in "user_name", :with => "roger_t2"
-  fill_in "password", :with => "test"
-  click_button(arg1)
+When(/^I click "(.*?)"$/) do |arg1|
+  click_link(arg1)
 end
 
-When(/^I enter an incorrect password and click "(.*?)"$/) do |arg1|
-  create_user
-  visit '/sessions/new'
-  fill_in "user_name", :with => "roger_t"
-  fill_in "password", :with => "test2"
+When(/^I then click "(.*?)"$/) do |arg1|
   click_button(arg1)
 end
 
