@@ -14,5 +14,3 @@ Scenario: Unsuccessful log out
   When I click "Sign Out"
   And I then click "No"
   Then I should see "Not signed out"
-
-

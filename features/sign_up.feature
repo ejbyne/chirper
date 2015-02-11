@@ -30,3 +30,4 @@ Scenario: I can't sign up if the password and password confirmation don't match
   Given I click the "Sign Up" button on the homepage
   When I enter a password and password confirmation that don't match and click "Sign Up"
   Then I should see "Password does not match the confirmation"
+  

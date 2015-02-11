@@ -21,3 +21,4 @@ Scenario: I can't log in with the incorrect password
   Given I click the "Sign In" button on the homepage
   When I enter an incorrect password and click "Sign In"
   Then I should see "The username or password is incorrect"
+  
