@@ -1,7 +1,8 @@
 module UserHelpers
 
   def add_user
-    User.create(  user_name:              "roger_t",
+    User.create(  id:                     1,
+                  user_name:              "roger_t",
                   first_name:             "Roger",
                   last_name:              "Test",
                   email:                  "test@test.com",

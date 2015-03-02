@@ -7,6 +7,7 @@ env = ENV['RACK_ENV'] || 'development'
 
 DataMapper.setup(:default, "postgres://localhost/chirper_#{env}")
 require_relative '../lib/user'
+require_relative '../lib/chirp'
 DataMapper.finalize
 DataMapper.auto_migrate!
 
