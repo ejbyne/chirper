@@ -1,4 +1,7 @@
 require 'spec_helper'
+require_relative 'helpers/user'
+
+include UserHelpers
 
   describe User do
 
@@ -70,12 +73,3 @@ require 'spec_helper'
 
   end
 
-  def add_user
-    User.create(  user_name:              "roger_t",
-                  first_name:             "Roger",
-                  last_name:              "Test",
-                  email:                  "test@test.com",
-                  email_confirmation:     "test@test.com",
-                  password:               "test",
-                  password_confirmation:  "test")
-  end

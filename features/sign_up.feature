@@ -14,12 +14,12 @@ Scenario: Signing up
 Scenario: I can't sign up if the username is already taken
   Given a username has already been registered
   When I try to register with the same username and click "Sign Up"
-  Then I should see "This username is already taken"
+  Then I should see "User name is already taken"
 
 Scenario: I can't sign up if the email is already taken
   Given an email has already been registered
   When I try to register with the same email and click "Sign Up"
-  Then I should see "This email is already taken"
+  Then I should see "Email is already taken"
 
 Scenario: I can't sign up if the email and email confirmation don't match
   Given I click the "Sign Up" button on the homepage
