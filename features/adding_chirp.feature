@@ -7,4 +7,4 @@ Scenario: Adding a chirp
   Given I have logged in
   When I click "Chirp"
   And I add a message
-  Then I should see my message on the homepage
+  Then I should see my chirp on the homepage

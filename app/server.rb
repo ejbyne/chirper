@@ -21,6 +21,8 @@ class Chirper < Sinatra::Base
   use Rack::MethodOverride
 
   get '/' do
+    @chirps = Chirp.all
+    @users = User.all
     erb :index
   end
 
@@ -77,10 +79,30 @@ class Chirper < Sinatra::Base
     end
   end
 
+  get '/chirps/new' do
+    erb :"chirps/new"
+  end
+
+  post '/chirps' do
+    @chirp = Chirp.create(message:              params[:message],
+                          user_id:              current_user.id,
+                          created_at:           Time.now)
+    if @chirp.save
+      redirect to('/')
+    else
+      flash.now[:errors] = @chirp.errors.full_messages
+      erb :"chirps/new"
+    end
+  end
+
   helpers do
 
     def current_user
       @current_user ||= User.get(session[:user_id])
+    end
+
+    def find_chirper(chirp)
+      User.get(chirp.user_id)
     end
 
   end

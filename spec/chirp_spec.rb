@@ -15,7 +15,7 @@ describe Chirp do
     chirp = Chirp.first
     expect(chirp.message).to eq("Hello I am Roger")
     expect(chirp.user_id).to eq(user.id)
-    expect(chirp.created_at).to eq(Time.now.strftime("%d-%m-%Y %H:%M"))
+    expect(chirp.created_at).not_to be(nil)
   end
 
 end

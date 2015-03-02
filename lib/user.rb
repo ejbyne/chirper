@@ -13,10 +13,10 @@ class User
   validates_confirmation_of :password
 
   property :id,               Serial
-  property :user_name,        String,   unique: true#,   message: "This username is already taken"
+  property :user_name,        String,   unique: true
   property :first_name,       String
   property :last_name,        String
-  property :email,            String,   unique: true#,   message: "This email is already taken"
+  property :email,            String,   unique: true
   property :password_digest,  Text
 
   has n,   :chirps,    :through => Resource

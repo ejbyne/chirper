@@ -4,7 +4,7 @@ class Chirp
 
   property :id,           Serial
   property :message,      Text
-  property :created_at,   String
+  property :created_at,   Time
 
   belongs_to  :user
 
