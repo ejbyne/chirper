@@ -1,12 +1,16 @@
 <h1>Welcome to Chirper!</h1>
 
 <section>
-  <ul>
-    <% @chirps.each do |chirp| %>
-      <%= chirp.message %><br>
-      Chirped by <%= find_chirper(chirp).first_name %> 
-      <%= find_chirper(chirp).last_name %> 
-      (<%= find_chirper(chirp).user_name %>) %>
+  <% if @chirps %>
+    <ul>
+      <% @chirps.each do |chirp| %>
+        <li>
+          <%= chirp.message %><br>
+          Chirped by <%= find_chirper(chirp).first_name %> 
+          <%= find_chirper(chirp).last_name %> 
+          (<%= find_chirper(chirp).user_name %>)
+        </li>
+      <% end %>
+    </ul>
     <% end %>
-  </ul>
 </section>
