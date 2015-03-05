@@ -1,6 +1,6 @@
 # Chirper
 
-## *** NOT YET COMPLETE ***
+## *** NOT YET COMPLETE - UNDER CONSTRUCTION ***
 
 ## Summary
 
