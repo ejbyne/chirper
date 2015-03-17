@@ -83,7 +83,7 @@ footer p {
 
 h1 {
   font-size: 22px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 form {
@@ -131,4 +131,20 @@ section {
 
 .flash.error {
   background-color: rgba(169,29,42,0.75);
+}
+
+.chirp {
+  background-color: #ecf0f1;
+  box-shadow: 0 0 5px rgba(0,0,0,0.4);
+  margin: 10px 100px;
+  padding: 20px 10px;
+}
+
+.chirp .message {
+  margin: 10px;
+}
+
+.chirp .author {
+  float: right;
+  font-size: 12px;
 }

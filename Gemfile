@@ -13,4 +13,5 @@ group :development, :test do
   gem 'rspec'
   gem 'selenium-webdriver'
   gem 'database_cleaner'
+  gem 'shotgun'
 end

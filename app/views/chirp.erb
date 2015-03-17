@@ -1,0 +1,6 @@
+<li class="chirp">
+  <span class="message"><%= chirp.message %></span><br>
+  <span class="author">Chirped by <%= find_chirper(chirp).first_name %> 
+  <%= find_chirper(chirp).last_name %> 
+  (<%= find_chirper(chirp).user_name %>)
+</span></li>

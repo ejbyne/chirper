@@ -1,5 +1,4 @@
 <% if flash[:errors] && !flash[:errors].empty? %>
-  Sorry, there were the following problems with the form:
   <ul>
     <% flash[:errors].each do |error| %>
       <li class="flash error"><%= error %></li>
