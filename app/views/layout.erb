@@ -5,50 +5,12 @@
 </head>
 
 <body>
-
   <div class="wrapper">
-
-    <header>
-      <a href ="/" id="logo">Chirper</a>
-      <div id="user-links">
-        <a href="/chirps/new" id="add-chirp" class="button">Chirp</a>
-        <% if current_user %>
-          Welcome, <%= current_user.user_name %>
-          <a href="/sessions/end" id="sign-out" class="button">  Sign Out
-          </a>
-        <% else %>
-          <a href="/sessions/new" id="sign-in" class="button">  Sign In
-          </a>
-          <a href="/users/new" id="sign-up" class="button">
-            Sign Up
-          </a>
-        <% end %>
-      </div>
-    </header>
-
-    <% if flash[:errors] && !flash[:errors].empty? %>
-      Sorry, there were the following problems with the form:
-      <ul id="errors">
-        <% flash[:errors].each do |error| %>
-          <li><%= error %></li>
-        <% end %>
-      </ul>
-    <% end %>
-    <% if flash[:notice] %>
-      <div id="notice">
-        <%= flash[:notice] %>
-      </div>
-    <% end %>
-
+    <%= partial :header %>
+    <%= partial :flash_message %>
     <div id="container">
       <%= yield %>
     </div>
-  
   </div>
-
-  <footer>
-    <p>This web application was built by <a href="https://github.com/ejbyne">Edward Byne</a> using Sinatra and PostgreSQL</p>
-  </footer>
-
-
+  <%= partial :footer %>
 </body>
