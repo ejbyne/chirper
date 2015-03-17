@@ -1,12 +1,18 @@
-<h2>Please enter your details:</h2>
+<section>
 
-<form action="/users" method="post">
-  Select Username: <input type="text" name="user_name" value="<%= @user.user_name %>">
-  First Name: <input type="text" name="first_name" value="<%= @user.first_name %>">
-  Last Name: <input type="text" name="last_name" value="<%= @user.last_name %>">
-  Email:<input type="email" name="email" value="<%= @user.email %>">
-  Confirm Email: <input type="email" name="email_confirmation" value="<%= @user.email_confirmation %>">
-  Password: <input type="password" name="password">
-  Confirm Password: <input type="password" name="password_confirmation">
-  <input type="submit" value="Sign Up">
-</form>
+  <h1>Please enter your details:</h1>
+
+  <form action="/users" method="post">
+    <table>
+      <tr><td>Select Username: </td><td><input type="text" name="user_name" value="<%= @user.user_name %>"></td></tr>
+      <tr><td>First Name: </td><td><input type="text" name="first_name" value="<%= @user.first_name %>"></td></tr>
+      <tr><td>Last Name: </td><td><input type="text" name="last_name" value="<%= @user.last_name %>"></td></tr>
+      <tr><td>Email: </td><td><input type="email" name="email" value="<%= @user.email %>"></td></tr>
+      <tr><td>Confirm Email: </td></td><td><input type="email" name="email_confirmation" value="<%= @user.email_confirmation %>"></td></tr>
+      <tr><td>Password: </td><td><input type="password" name="password"></td></tr>
+      <tr><td>Confirm Password: </td><td><input type="password" name="password_confirmation"></td></tr>
+      <tr><td></td><td><input type="submit" class="button" value="Sign Up"></td></tr>
+    </table>
+  </form>
+
+</section>

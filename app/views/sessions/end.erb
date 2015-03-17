@@ -1,11 +1,15 @@
-<h2>Are you sure you want to sign out?</h2>
+<section>
 
-<form method="post" action="/sessions">
-  <input type="hidden" name="_method" value="delete">
-  <input type="submit" value="Yes">
-</form>
+  <h1>Are you sure you want to sign out?</h1>
 
-<form method="post" action="/sessions/keep">
-  <input type="hidden" name="no_sign_out">
-  <input type="submit" value="No">
-</form>
+  <form method="post" action="/sessions">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" class="button" value="Yes">
+  </form>
+
+  <form method="post" action="/sessions/keep">
+    <input type="hidden" name="no_sign_out">
+    <input type="submit" class="button" value="No">
+  </form>
+
+</section>
