@@ -42,6 +42,10 @@ The live version of the site is available [here](https://chirper-chirper.herokua
 - Add password reset functionality (as per [Bookmark Manager](https://github.com/ejbyne/bookmark-manager) project)
 - Work on the CSS to make it look good
 
+## Screenshot
+
+<img src="images/screenshot.png">
+
 ## Instructions
 
 To try the app locally, please clone this repository on your machine:
@@ -64,7 +68,3 @@ Run the tests:
 $ rspec
 $ cucumber
 ```
-
-## Screenshot
-
-<img src="images/screenshot.png">
