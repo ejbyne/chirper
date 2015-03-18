@@ -1,7 +1,12 @@
 class Chirper
 
   get '/chirps/new' do
-    erb :"chirps/new"
+    if current_user
+      erb :"chirps/new"
+    else
+      flash.now[:errors] = ["You must log in to add a chirp"]
+      erb :index
+    end
   end
 
   post '/chirps' do

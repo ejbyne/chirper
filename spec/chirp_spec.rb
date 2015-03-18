@@ -18,4 +18,11 @@ describe Chirp do
     expect(chirp.created_at).not_to be(nil)
   end
 
+  it 'does not create a chirp if no user id is available' do
+    expect(Chirp.count).to eq(0)
+    Chirp.create( message:      "Hello",
+                  created_at:   time = Time.now)
+    expect(Chirp.count).to eq(0)
+  end
+
 end

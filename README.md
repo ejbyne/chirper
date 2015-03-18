@@ -31,11 +31,11 @@ I used Cucumber and Capybara to create feature tests, together with RSpec for un
 - Use Bcrypt to secure the passwords
 - Use DataMapper and PostgreSQL to save the data
 - Users don't have to be logged in to see the peeps
+- Show peeps in chronological order
 
 ## To do list
 
-- Refactor code into separate controller/partial/helper files
-- Show peeps in chronological order
 - Users can only peep if they are logged in
 - Users can start a conversation by replying to a peep from another user
+- Allow users to follow each other and view tweets from those they are following
 - Work on the CSS to make it look good

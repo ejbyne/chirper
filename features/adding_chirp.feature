@@ -14,3 +14,8 @@ Scenario: The chirps are sorted in chronological order
   When some chirps have been added
   And I visit the homepage
   Then the chirps should be sorted in chronological order
+
+Scenario: User must be logged in to add a chirp
+  Given I have not logged in
+  When I visit the homepage
+  Then I am unable to add a chirp

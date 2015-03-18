@@ -27,3 +27,13 @@ Then(/^the chirps should be sorted in chronological order$/) do
   expect(chirps[1]).to have_content("Hello me again")
   expect(chirps[2]).to have_content("Hello I am Roger")
 end
+
+Given(/^I have not logged in$/) do
+  visit('/')
+end
+
+Then(/^I am unable to add a chirp$/) do
+  expect(page).not_to have_link('Chirp', exact: true)
+  visit('/chirps/new')
+  expect(page).to have_content('You must log in to add a chirp')
+end
