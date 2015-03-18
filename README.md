@@ -33,9 +33,9 @@ I used Cucumber and Capybara to create feature tests, together with RSpec for un
 - Users don't have to be logged in to see the peeps
 - Show peeps in chronological order
 - Users can only peep if they are logged in
+- Users can start a conversation by replying to a peep from another user
 
 ## To do list
-
-- Users can start a conversation by replying to a peep from another user
-- Allow users to follow each other and view tweets from those they are following
+- Shows the time and date each chirp/reply
+- Allow users to follow each other and view tweets specifically from those users they are following
 - Work on the CSS to make it look good

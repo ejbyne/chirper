@@ -12,4 +12,8 @@ module Helpers
     Reply.all(:chirp_id => chirp_id, :order => [ :created_at.desc ])
   end
 
+  def formatted_creation_time(message)
+    message.created_at.strftime("at %l:%M%P on %d.%m.%Y")
+  end
+
 end

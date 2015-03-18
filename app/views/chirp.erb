@@ -6,6 +6,7 @@
         <%= find_author(chirp).first_name %>
         <%= find_author(chirp).last_name %> 
         (<%= find_author(chirp).user_name %>)
+        <%= formatted_creation_time(chirp) %>
       </span><br><br>
     </li>
     <% if chirp_replies(chirp.id) %>
@@ -16,6 +17,7 @@
             <%= find_author(reply).first_name %>
             <%= find_author(reply).last_name %>
             (<%= find_author(reply).user_name %>)
+            <%= formatted_creation_time(reply) %>
           </span><br><br>
       <% end %>
     <% end %><br>
