@@ -28,13 +28,18 @@ I used Cucumber and Capybara to create feature tests, together with RSpec for un
 - Chirps have the name of the user and their user handle
 - Use Bcrypt to secure the passwords
 - Use DataMapper and PostgreSQL to save the data
-- Users don't have to be logged in to see the peeps
-- Show peeps in chronological order
-- Users can only peep if they are logged in
+- Users don't have to be logged in to see the chirps
+- Show chirps in chronological order
+- Users can only chirp if they are logged in
 - Users can start a conversation by replying to a peep from another user
+- Users can only reply to a chirp if they are logged in
 - Shows the time and date of each chirp/reply
 
 ## To do list
 - Allow users to follow each other and view tweets specifically from those users they are following
 - Add password reset functionality (as per [Bookmark Manager](https://github.com/ejbyne/bookmark-manager) project)
 - Work on the CSS to make it look good
+
+## Screenshot
+
+<img src="images/screenshot.png">
