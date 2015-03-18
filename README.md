@@ -8,6 +8,8 @@ This was a good exercise to consolidate what we had learned in the [Bookmark Man
 
 I used Cucumber and Capybara to create feature tests, together with RSpec for unit testing the models.
 
+The live version of the site is available [here](https://chirper-chirper.herokuapp.com).
+
 ## Technologies used
 
 - Ruby
@@ -39,6 +41,29 @@ I used Cucumber and Capybara to create feature tests, together with RSpec for un
 - Allow users to follow each other and view tweets specifically from those users they are following
 - Add password reset functionality (as per [Bookmark Manager](https://github.com/ejbyne/bookmark-manager) project)
 - Work on the CSS to make it look good
+
+## Instructions
+
+To try the app locally, please clone this repository on your machine:
+```
+$ git clone https://github.com/ejbyne/chirper.git
+```
+Change into the directory and install the Ruby gems:
+```
+$ cd chirper
+$ bundle install
+```
+Start the Sinatra server:
+```
+$ rackup
+```
+Visit [http://localhost:9292](http://localhost:9292).
+
+Run the tests:
+```
+$ rspec
+$ cucumber
+```
 
 ## Screenshot
 
