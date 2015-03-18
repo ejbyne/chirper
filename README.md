@@ -1,7 +1,5 @@
 # Chirper
 
-## *** NOT YET COMPLETE ***
-
 ## Summary
 
 Our Week 4 challenge at Makers Academy was to build a basic Twitter clone using Sinatra.
