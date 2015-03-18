@@ -37,3 +37,7 @@ Then(/^I am unable to add a chirp$/) do
   visit('/chirps/new')
   expect(page).to have_content('You must log in to add a chirp')
 end
+
+Then(/^I see see the time and date of the message on the homepage$/) do
+  expect(page).to have_content(Time.now.strftime("at %l:%M%P on %d.%m.%Y"))
+end

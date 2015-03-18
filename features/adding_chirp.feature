@@ -19,3 +19,9 @@ Scenario: User must be logged in to add a chirp
   Given I have not logged in
   When I visit the homepage
   Then I am unable to add a chirp
+
+Scenario: The time and date of each chirp is shown
+  Given I have logged in
+  When I click "Chirp"
+  And I add a message
+  Then I see see the time and date of the message on the homepage
