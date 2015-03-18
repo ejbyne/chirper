@@ -6,3 +6,4 @@ require_relative 'models/chirp'
 require_relative 'models/reply'
 DataMapper.finalize
 DataMapper.auto_migrate!
+  

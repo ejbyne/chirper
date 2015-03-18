@@ -36,4 +36,5 @@ I used Cucumber and Capybara to create feature tests, together with RSpec for un
 
 ## To do list
 - Allow users to follow each other and view tweets specifically from those users they are following
+- Add password reset functionality (as per [Bookmark Manager](https://github.com/ejbyne/bookmark-manager) project)
 - Work on the CSS to make it look good
