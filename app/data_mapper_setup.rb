@@ -5,4 +5,4 @@ require_relative 'models/user'
 require_relative 'models/chirp'
 require_relative 'models/reply'
 DataMapper.finalize
-DataMapper.auto_upgrade!
+DataMapper.auto_migrate!
