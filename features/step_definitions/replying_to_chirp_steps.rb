@@ -4,7 +4,7 @@ Given(/^a chirp has been added$/) do
 end
 
 When(/^I add a reply$/) do
-  fill_in "reply", :with => "Hi back!"
+  fill_in "message", :with => "Hi back!"
   click_button("Reply")
 end
 

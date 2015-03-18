@@ -4,7 +4,7 @@ I want to sign up to the service
 
 Scenario: Visiting the homepage
   Given I visit the homepage
-  Then I should see "Welcome to Chirper"
+  Then I should see "Chirp away!"
 
 Scenario: Signing up
   Given I click the "Sign Up" button on the homepage

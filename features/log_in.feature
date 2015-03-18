@@ -5,7 +5,7 @@ I want to log in
 
 Scenario: Visiting the homepage
   Given I visit the homepage
-  Then I should see "Welcome to Chirper!"
+  Then I should see "Chirp away!"
 
 Scenario: Logging in
   Given I click the "Sign In" button on the homepage

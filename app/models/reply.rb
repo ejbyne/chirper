@@ -1,4 +1,4 @@
-class Chirp
+class Reply
 
   include DataMapper::Resource
 
@@ -6,7 +6,7 @@ class Chirp
   property :message,      Text
   property :created_at,   Time
 
-  belongs_to  :user
-  has n,      :replies,    :through => Resource
+  belongs_to    :chirp
+  belongs_to    :user
 
 end

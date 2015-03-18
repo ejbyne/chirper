@@ -20,6 +20,7 @@ class User
   property :password_digest,  Text
 
   has n,   :chirps,    :through => Resource
+  has n,   :replies,   :through => Resource
 
   def password=(password)
     @password = password

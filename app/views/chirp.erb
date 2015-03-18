@@ -1,6 +1,24 @@
 <li class="chirp">
-  <span class="message"><%= chirp.message %></span><br>
-  <span class="author">Chirped by <%= find_chirper(chirp).first_name %> 
-  <%= find_chirper(chirp).last_name %> 
-  (<%= find_chirper(chirp).user_name %>)
-</span></li>
+  <ul>
+    <li>
+      <span class="message"><%= chirp.message %></span><br>
+      <span class="author">Chirped by
+        <%= find_author(chirp).first_name %>
+        <%= find_author(chirp).last_name %> 
+        (<%= find_author(chirp).user_name %>)
+      </span><br><br>
+    </li>
+    <% if chirp_replies(chirp.id) %>
+      <% chirp_replies(chirp.id).each do |reply| %>
+        <li>
+          <span class="message"><%= reply.message %></span><br>
+          <span class="author">Reply by 
+            <%= find_author(reply).first_name %>
+            <%= find_author(reply).last_name %>
+            (<%= find_author(reply).user_name %>)
+          </span><br><br>
+      <% end %>
+    <% end %><br>
+    <a href="/chirps/<%= chirp.user_id %>/replies/new" class="button">Reply</a>
+  </ul>
+</li>

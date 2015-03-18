@@ -4,8 +4,8 @@ class Chirper
     if current_user
       erb :"chirps/new"
     else
-      flash.now[:errors] = ["You must log in to add a chirp"]
-      erb :index
+      flash[:errors] = ["You must log in to add a chirp"]
+      redirect to('/')
     end
   end
 
